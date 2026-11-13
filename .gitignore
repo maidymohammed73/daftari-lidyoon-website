@@ -1,0 +1,10 @@
+node_modules
+dist
+*.local
+.env
+.env.*
+.netlify
+.vite
+
+# Reference only - contains contact details from the brand sheet
+docs/brand-identity.jpg
