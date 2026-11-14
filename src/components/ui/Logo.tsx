@@ -1,4 +1,5 @@
 import { usePrefs } from '../../context/Preferences';
+import { url } from '../../lib/paths';
 
 interface LogoProps {
   className?: string;
@@ -15,7 +16,7 @@ export default function Logo({ className = 'h-14', priority = false }: LogoProps
   const { t } = usePrefs();
   return (
     <img
-      src="/logo.jpg"
+      src={url('logo.jpg')}
       alt={t.ui.logoAlt}
       width={1536}
       height={1024}

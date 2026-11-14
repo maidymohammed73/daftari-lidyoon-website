@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { usePrefs } from './context/Preferences';
+import { routePath, url } from './lib/paths';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
@@ -22,7 +23,7 @@ import LegalPage, { type LegalKind } from './components/LegalPage';
 
 /** Tiny path-based router: "/" is the landing page, "/privacy" and "/terms" are legal pages. */
 function currentPage(): 'home' | LegalKind {
-  const path = window.location.pathname.replace(/\/+$/, '').toLowerCase();
+  const path = routePath();
   if (path === '/privacy') return 'privacy';
   if (path === '/terms') return 'terms';
   return 'home';
@@ -33,7 +34,7 @@ export default function App() {
   const page = currentPage();
   const isHome = page === 'home';
   /** Prefix for in-page anchors so they also work from the legal pages. */
-  const base = isHome ? '' : '/';
+  const base = isHome ? '' : url();
 
   // Page title + meta description follow the current page and language.
   useEffect(() => {

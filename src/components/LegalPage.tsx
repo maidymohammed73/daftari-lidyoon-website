@@ -1,6 +1,7 @@
 import { FileText, Info } from 'lucide-react';
 import { usePrefs } from '../context/Preferences';
 import { Forward } from './ui/Toggles';
+import { url } from '../lib/paths';
 
 export type LegalKind = 'privacy' | 'terms';
 
@@ -14,7 +15,7 @@ export default function LegalPage({ kind }: { kind: LegalKind }) {
     <article className="relative pb-24 pt-32 lg:pt-40">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-80 bg-brand-gradient-soft" aria-hidden="true" />
       <div className="container-x relative max-w-3xl">
-        <a href="/" className="inline-flex items-center gap-2 text-sm font-bold text-cyan hover:underline">
+        <a href={url()} className="inline-flex items-center gap-2 text-sm font-bold text-cyan hover:underline">
           <span className="rotate-180">
             <Forward size={16} />
           </span>
@@ -51,7 +52,7 @@ export default function LegalPage({ kind }: { kind: LegalKind }) {
         </ol>
 
         <a
-          href={`/${other}`}
+          href={url(other)}
           className="mt-10 inline-flex items-center gap-2 rounded-2xl bg-card px-5 py-3 font-bold text-ink shadow-soft ring-1 ring-ink/5 transition hover:ring-cyan/40"
         >
           {other === 'privacy' ? l.privacyLink : l.termsLink}

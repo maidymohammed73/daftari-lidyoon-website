@@ -2,6 +2,7 @@ import { Facebook, Instagram, Mail, MapPin, MessageCircle, Phone, Twitter, type 
 import { sectionIds, siteConfig, type SocialKey } from '../data/content';
 import { usePrefs } from '../context/Preferences';
 import Logo from './ui/Logo';
+import { url } from '../lib/paths';
 import StoreBadges from './ui/StoreBadges';
 
 const socialIcons: Record<SocialKey, LucideIcon> = {
@@ -86,12 +87,12 @@ export default function Footer({ base = '' }: { base?: string }) {
           </p>
           <ul className="flex items-center gap-5">
             <li>
-              <a href="/privacy" className="transition hover:text-cyan">
+              <a href={url('privacy')} className="transition hover:text-cyan">
                 {t.legal.privacyLink}
               </a>
             </li>
             <li>
-              <a href="/terms" className="transition hover:text-cyan">
+              <a href={url('terms')} className="transition hover:text-cyan">
                 {t.legal.termsLink}
               </a>
             </li>
