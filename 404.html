@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دفتري لديون | ديونك مرتبة.. وحساباتك أوضح</title>
+    <meta
+      name="description"
+      content="دفتري لديون تطبيق عربي لإدارة الديون وحسابات العملاء. سجّل ديونك، تابع المدفوعات والمستحقات، واحصل على تقارير واضحة في مكان واحد."
+    />
+    <meta name="keywords" content="دفتري لديون, إدارة الديون, حسابات العملاء, دفتر ديون, تطبيق محاسبة, متابعة المدفوعات" />
+    <meta name="theme-color" content="#F5F9FF" />
+
+    <!-- Apply saved language + theme before first paint (prevents a flash). -->
+    <script>
+      (function () {
+        try {
+          var d = document.documentElement;
+          // URL params (?lang=en&theme=dark) win over saved preferences — handy for sharing links.
+          var q = new URLSearchParams(location.search);
+          var l = q.get('lang') || localStorage.getItem('dl-lang');
+          if (l === 'en') {
+            d.lang = 'en';
+            d.dir = 'ltr';
+          }
+          var t = q.get('theme') || localStorage.getItem('dl-theme');
+          if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            d.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="icon" type="image/jpeg" href="/daftari-lidyoon-website/logo.jpg" />
+    <link rel="apple-touch-icon" href="/daftari-lidyoon-website/logo.jpg" />
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:title" content="دفتري لديون | ديونك مرتبة.. وحساباتك أوضح" />
+    <meta property="og:description" content="كل ديونك وحساباتك بمكان واحد. نظّم معاملاتك وتابع مستحقاتك بكل سهولة." />
+    <!-- After deploying, replace with the full URL, e.g. https://your-domain.com/og-image.jpg -->
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="دفتري لديون — Daftari Lidyoon" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/og-image.jpg" />
+
+    <!-- Brand typography: Cairo (headings) + Tajawal (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/daftari-lidyoon-website/assets/index-B3n4SlkA.js"></script>
+    <link rel="stylesheet" crossorigin href="/daftari-lidyoon-website/assets/index-CJOhFs6e.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
